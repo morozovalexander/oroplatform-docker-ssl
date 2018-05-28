@@ -44,7 +44,6 @@
     
     run installation commands
     ```
-    cp app/config/parameters.yml.dist app/config/parameters.yml
     sh reinstall.sh
     ```
 

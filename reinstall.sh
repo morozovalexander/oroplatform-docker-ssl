@@ -4,7 +4,7 @@ php app/console oro:install \
 --env=prod \
 --drop-database \
 --application-url=https://webserver.oro.docker \
---organization-name=Oduvanchik \
+--organization-name=OROPLATFORM \
 --user-name=admin \
 --user-email=useremail@gmail.com \
 --user-firstname=FIRSTNAME \
