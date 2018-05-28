@@ -50,6 +50,8 @@
     ```
     sh reinstall.sh
     ```
+    
+    exit typing `exit` command
 
 10. Access oro platform in browser by following url:
     ```
