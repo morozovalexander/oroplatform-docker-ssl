@@ -102,6 +102,17 @@ services:
     environment:
       - ORO_VERBOSE=1
 
+  webserver-proxy:
+    extends:
+      file: nginx-proxy/nginx-proxy.yml
+      service: nginx-proxy
+    links:
+      - webserver
+    volumes_from:
+      - data
+    environment:
+      - ORO_VERBOSE=1
+
   webserver:
     extends:
       file: nginx/nginx.yml
