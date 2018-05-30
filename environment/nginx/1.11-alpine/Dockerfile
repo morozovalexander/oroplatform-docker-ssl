@@ -1,8 +1,6 @@
 FROM nginx:1.11-alpine
 
 COPY conf/nginx.conf /etc/nginx/nginx.conf
-COPY conf/symfony2.conf /etc/nginx/conf.d/default.conf
-COPY conf/websocket.conf /etc/nginx/conf.d/websocket.conf
 COPY conf/entrypoint.sh /entrypoint.sh
 
 ENV SYMFONY_ENV="prod"

@@ -4,10 +4,12 @@ services:
   data:
     image: oroinc/data:latest
     volumes:
-      - "${BUILD_DIR:-.}/.composer/cache:/usr/local/composer/cache:cached"
-      - "${BUILD_DIR:-.}/.composer/auth:/usr/local/composer/auth:cached"
-      - "${ORO_APP}:/var/www/html/application:cached"
-      - "${ORO_APP}/../../package:/var/www/package:cached"
+      - "${BUILD_DIR:-.}/.composer/cache:/usr/local/composer/cache"
+      - "${BUILD_DIR:-.}/.composer/auth:/usr/local/composer/auth"
+      - "${ORO_APP}:/var/www/html/application"
+      - "${ORO_APP}/environment/ssl:/etc/nginx/ssl"
+      - "${ORO_APP}/environment/nginx/conf/for_mount:/etc/nginx/conf.d"
+      - "${ORO_APP}/../../package:/var/www/package"
 
   data-cache-named:
     image: oroinc/data-cache:latest
